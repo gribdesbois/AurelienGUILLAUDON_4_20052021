@@ -1,5 +1,6 @@
 {
   "devDependencies": {
-    "purgecss": "^4.0.3"
+    "purgecss": "^4.0.3",
+    "sass": "^1.37.0"
   }
 }

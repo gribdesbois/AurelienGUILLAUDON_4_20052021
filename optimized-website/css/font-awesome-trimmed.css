@@ -32,6 +32,14 @@
     }
 }
 
+.fa-chevron-left:before {
+    content: "\f053"
+}
+
+.fa-chevron-right:before {
+    content: "\f054"
+}
+
 .fa-chevron-up:before {
     content: "\f077"
 }

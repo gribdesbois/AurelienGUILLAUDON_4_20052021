@@ -18,6 +18,15 @@ a:hover {
     cursor: pointer;
 }
 
+#page-loading-blocs-notifaction {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 100000;
+    background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
+}
+
 .bloc {
     width: 100%;
     clear: both;
@@ -119,12 +128,24 @@ a:hover {
     background: rgba(255, 255, 255, 1);
 }
 
+.d-bloc .panel {
+    color: rgba(0, 0, 0, .5);
+}
 
+.d-bloc .panel button:hover {
+    color: rgba(0, 0, 0, .7);
+}
+
+.d-bloc .panel icon {
+    border-color: rgba(0, 0, 0, .7);
+}
+
+.d-bloc .panel,
 .l-bloc {
     color: rgba(0, 0, 0, .5);
 }
 
-
+.d-bloc .panel button:hover,
 .l-bloc button:hover {
     color: rgba(0, 0, 0, .7);
 }
@@ -198,6 +219,8 @@ a:hover {
     max-height: 200px;
     margin: 0 5px 0 0;
     display: inline;
+    width: 214.45px;
+    
 }
 
 .navbar .nav {
@@ -211,6 +234,10 @@ a:hover {
     float: left;
     margin-top: 4px;
     font-size: 16px;
+}
+
+.navbar-nav .open .dropdown-menu > li > a {
+    text-align: inherit;
 }
 
 .nav > li a:hover,
@@ -232,6 +259,17 @@ a:hover {
     width: 26px;
 }
 
+.nav-invert .navbar .nav {
+    float: left;
+}
+
+.nav-invert .navbar-header,
+.nav-invert .navbar-brand {
+    float: right;
+    position: relative;
+    z-index: 2;
+}
+
 @media (min-width: 768px) {
     .site-navigation {
         position: absolute;
@@ -240,6 +278,42 @@ a:hover {
         transform: translate(0, -50%);
         -webkit-transform: translateY(-50%);
     }
+    .nav > li .dropdown-menu a,
+    .nav > li .dropdown-menu a:hover {
+        color: #484848;
+    }
+    .nav-invert .site-navigation {
+        left: 0;
+        right: 0;
+    }
+}
+
+.nav > li > .dropdown a {
+    background: none!important;
+    display: block;
+    padding: 14px 15px;
+}
+
+.dropdown-menu .dropdown-menu {
+    top: -8px;
+    left: 100%;
+}
+
+.dropdown-menu .dropmenu-flow-right {
+    top: 100%;
+    left: 0;
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.dropdown-menu .dropdown span {
+    border: 4px solid black;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    margin: 6px -5px 0 0!important;
+    float: right;
 }
 
 .mg-md {
@@ -310,6 +384,11 @@ button {
     margin-top: 6px;
 }
 
+.showScrollTop {
+    font-size: 14px;
+    opacity: 1;
+}
+
 a[data-lightbox] {
     position: relative;
     display: block;
@@ -338,6 +417,85 @@ a[data-lightbox]:hover img {
     opacity: 0.6;
     -webkit-animation-fill-mode: none;
     animation-fill-mode: none;
+}
+
+#lightbox-modal {
+    display: flex;
+    align-items: center;
+}
+
+#lightbox-modal .modal-dialog {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 0;
+}
+
+#lightbox-modal .modal-dialog img {
+    max-height: 90vh;
+    margin: 0 auto;
+}
+
+.lightbox-caption {
+    padding: 20px;
+    color: #FFF;
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 5px;
+}
+
+.close-lightbox {
+    color: #FFF;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
+    background: rgba(0, 0, 0, .5);
+    border: none;
+    line-height: 30px;
+    padding: 0 9px 5px;
+    opacity: 0.3;
+}
+
+.close-lightbox:hover,
+.next-lightbox:hover,
+.prev-lightbox:hover {
+    opacity: 1.0;
+    color: #FFF;
+}
+
+.next-lightbox,
+.prev-lightbox {
+    font-size: 20px;
+    color: rgba(255, 255, 255, .9);
+    background: rgba(0, 0, 0, .5);
+    transition: all .2s ease-in-out;
+    position: absolute;
+    top: 45%;
+    z-index: 1;
+    opacity: 0.4;
+}
+
+.next-lightbox {
+    padding: 6px 8px 1px 13px;
+    right: 25px;
+}
+
+.prev-lightbox {
+    padding: 6px 13px 1px 10px;
+    left: 25px;
+}
+
+.snapshot-lb .modal-body {
+    padding-bottom: 45px;
+}
+
+.snapshot-lb .lightbox-caption {
+    padding: 0;
+    color: rgba(0, 0, 0, .5);
+    background: none;
 }
 
 h1,
@@ -491,7 +649,7 @@ h1 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation-1600.bmp");
+    background-image: url("img/image-de-presentation-1600.jpg");
     
 }
 
@@ -500,37 +658,55 @@ h1 {
     .bg-presentation {
         background-image: url("img/image-de-presentation.bmp-400");
     }
+    .bg-banniere {
+        background-image: url("img/la-chouette-agence-banniere-400.jpg");
     
+    }
 }
 @media (min-width: 401px) and (max-width: 600px) {
     .bg-presentation {
         background-image: url("img/image-de-presentation.bmp-600");
     }
+    .bg-banniere {
+        background-image: url("img/la-chouette-agence-banniere-600.jpg");
     
+    }
 }
 @media (min-width: 601px) and (max-width: 800px) {
     .bg-presentation {
         background-image: url("img/image-de-presentation.bmp-800");
     }
+    .bg-banniere {
+        background-image: url("img/la-chouette-agence-banniere-800.jpg");
     
+    }
 }
 @media (min-width: 801px) and (max-width: 1000px) {
     .bg-presentation {
         background-image: url("img/image-de-presentation.bmp-1000");
     }
-    
+    .bg-banniere {
+    background-image: url("img/la-chouette-agence-banniere-1000.jpg");
+
+}
 }
 @media (min-width: 1001px) and (max-width: 1200px) {
     .bg-presentation {
         background-image: url("img/image-de-presentation.bmp-1200");
     }
-    
+    .bg-banniere {
+    background-image: url("img/la-chouette-agence-banniere-1200.jpg");
+
+}
 }
 @media (min-width: 1201px) and (max-width: 1400px) {
     .bg-presentation {
         background-image: url("img/image-de-presentation.bmp-1400");
     }
-    
+    .bg-banniere {
+    background-image: url("img/la-chouette-agence-banniere-1400.jpg");
+
+}
 }
 
 
@@ -573,6 +749,16 @@ h1 {
         position: relative;
     }
     .bloc {
+        padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right);
+    }
+    .bloc-group,
+    .bloc-group .bloc {
+        display: block;
+        width: 100%;
+    }
+    .bloc-fill-screen .fill-bloc-top-edge {
+        padding: 0 20px;
         padding-left: constant(safe-area-inset-left);
         padding-right: constant(safe-area-inset-right);
     }
@@ -619,6 +805,9 @@ h1 {
     .nav > li:hover {
         background: rgba(0, 0, 0, .08);
     }
+    .hero {
+        padding: 50px 0;
+    }
     .navbar-collapse {
         padding: 0;
         overflow-x: hidden;
@@ -628,6 +817,14 @@ h1 {
     .navbar-brand img {
         max-height: 40px;
         width: auto;
+    }
+    .nav-invert .navbar-header {
+        float: none;
+        width: 100%;
+    }
+    .nav-invert .navbar-toggle {
+        float: left;
+        margin-left: 10px;
     }
     .bloc {
         padding-left: 0;
@@ -642,6 +839,11 @@ h1 {
         padding-left: 0;
         padding-right: 0;
     }
+    
+    .bloc-fill-screen .fill-bloc-top-edge {
+        padding-left: 0;
+        padding-right: 0;
+    }
     .voffset {
         margin-top: 5px;
     }
@@ -650,6 +852,9 @@ h1 {
     }
     form {
         padding: 5px;
+    }
+    .close-lightbox {
+        display: inline-block;
     }
 }
 

@@ -11,16 +11,18 @@
 
 	<!-- Stylesheet , scripts and fonts are loaded asynchronously-->
 
+	<link rel="preconnect" href="https://www.googletagmanager.com"> 
+
 	<link rel="shortcut icon" type="image/png" href="favicon.jpg">
 
-	<link rel="preload" href="./css/bootstrap.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="./css/bootstrap-trimmed.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript>
-		<link rel="stylesheet" href="./css/bootstrap.css">
+		<link rel="stylesheet" href="./css/bootstrap-trimmed.css">
 	</noscript>
 
-	<link rel="preload" href="./style-trimmed.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="./style-trimmed.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript>
-		<link rel="stylesheet" href="./style-trimmed.min.css">
+		<link rel="stylesheet" href="./style-trimmed.css">
 	</noscript>
 
 	<link rel="preload" href="./css/font-awesome-trimmed.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -46,7 +48,7 @@
 	<!-- Analytics -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script  src="https://www.googletagmanager.com/gtag/js?id=G-BCH5FM8FRD" async></script>
+	<!--<script  src="https://www.googletagmanager.com/gtag/js?id=G-BCH5FM8FRD" async></script>-->  <!-- CHECK RELEVANCE -->
 	<script async>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
@@ -55,6 +57,12 @@
 		gtag('config', 'G-BCH5FM8FRD');
 	</script>
 	<!-- Analytics END -->
+
+	<script src="./js/jquery-2.1.0.js" defer></script>
+<script src="./js/bootstrap.js" defer></script>
+<script src="./js/blocs.js" defer></script>
+<script src="./js/jquery.touchSwipe.js" defer></script>
+<!-- <script src="./js/gmaps.js" defer></script> -->  <!-- not in use-->
 
 </head>
 
@@ -70,7 +78,7 @@
 					<div class="navbar-header">
 
 						<a class="navbar-brand" href="index.html"><img src="img/la-chouette-agence.png"
-								alt="logo la chouette agence webdesign lyon" height="40" /></a>
+								alt="logo la chouette agence webdesign lyon" height="40" width="214"/></a>
 
 						<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle"
 							data-toggle="collapse" data-target=".navbar-1">
@@ -100,7 +108,7 @@
 			<div class="container bloc-lg">
 				<div class="row tight-width-whitespace">
 					<div class="col-sm-12">
-						<img src="img/logo.png" class="center-block image-resize-mode" width="100"
+						<img src="img/logo.png" class="center-block image-resize-mode" width="100" height="100"
 							alt="logo la chouette agence webdesign lyon" />
 						<h1 class="text-center hero-bloc-text tc-white ">
 							La chouette agence studio de création graphique pour vos sites web
@@ -214,7 +222,7 @@
 						<a href="#" data-lightbox="./img/journal-local-new-design-hd.jpg" data-gallery-id="gallery-1"
 							data-caption="Refonte d'un site web pour un journal local" data-frame="snapshot-lb"><img
 								src="./img/journal-local-new-design.jpg" alt="refonte site web local"
-								class="img-responsive portfolio-thumb" /></a>
+								class="img-responsive portfolio-thumb" width="270" height="270"/></a>
 						<h3 class="mg-md text-center">
 							Refonte d'un site web pour un journal local
 						</h3>
@@ -227,7 +235,9 @@
 							data-gallery-id="gallery-1" data-caption="Création d'un site web pour photographes"
 							data-frame="snapshot-lb"><img src="./img/creation-site-web-photographe.jpg"
 								class="img-responsive portfolio-thumb"
-								alt="Création d'un site web pour photographes" /></a>
+								alt="Création d'un site web pour photographes" 
+								width="270" height="270"
+								/></a>
 						<h3 class="mg-md text-center">
 							Création d'un site web pour photographes
 						</h3>
@@ -241,7 +251,9 @@
 						<a href="#" data-lightbox="./img/creation-site-voyage-original-size.jpg"
 							data-gallery-id="gallery-1" data-caption="Création d'un site internet pour un voyageur"
 							data-frame="snapshot-lb"><img src="./img/creation-site-voyage.jpg"
-								class="img-responsive portfolio-thumb" alt="Création d'un site web pour voyageur" /></a>
+								class="img-responsive portfolio-thumb" alt="Création d'un site web pour voyageur" 
+								width="270" height="270"
+								/></a>
 						<h3 class="mg-md text-center">
 							Création d'un site internet pour un voyageur
 						</h3>
@@ -255,7 +267,9 @@
 							data-gallery-id="gallery-1" data-caption="Conception d'un site pour une agence de mariage"
 							data-frame="snapshot-lb"><img src="./img/conception-site-agence-mariage.jpg"
 								class="img-responsive portfolio-thumb"
-								alt="Création d'un site web pour agence de mariage" /></a>
+								alt="Création d'un site web pour agence de mariage" 
+								width="270" height="270"
+								/></a>
 						<h3 class="mg-md text-center">
 							Conception d'un site pour une agence de mariage
 						</h3>
@@ -357,11 +371,7 @@
 
 </body>
 
-<script src="./js/jquery-2.1.0.js" defer></script>
-<script src="./js/bootstrap.js" defer></script>
-<script src="./js/blocs.js" defer></script>
-<script src="./js/jquery.touchSwipe.js" defer></script>
-<!-- <script src="./js/gmaps.js" defer></script> -->  <!-- not in use-->
+>
 
 
 

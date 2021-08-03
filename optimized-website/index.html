@@ -11,7 +11,7 @@
 
 	<!-- Stylesheet , scripts and fonts are loaded asynchronously-->
 
-	<link rel="preconnect" href="https://www.googletagmanager.com"> 
+	<!--<link rel="preconnect" href="https://www.googletagmanager.com"> -->
 
 	<link rel="shortcut icon" type="image/png" href="favicon.jpg">
 
@@ -39,23 +39,39 @@
 	<link rel="preload" href="./fonts/et-line.woff" as="font" type="font/woff" crossorigin>
 	<link rel="preload" href="./fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" type="font/woff2" crossorigin>
 
-	<!-- Largest Contentful Paint -->	
-	<link rel="preload" href="./img/la-chouette-agence-banniere.jpg" as="image">
+	<!-- Largest Contentful Paint   NOT SURE IT WORKS THOUGH -->	
+	<link rel="preload" href="./img/la-chouette-agence-banniere.jpg" as="image"
+	imagesrcset="
+	./img/la-chouette-agence-banniere-1600.jpg 1600w,
+	./img/la-chouette-agence-banniere-1400.jpg 1400w,
+	./img/la-chouette-agence-banniere-1200.jpg 1200w,
+	./img/la-chouette-agence-banniere-1000.jpg 1000w,
+	./img/la-chouette-agence-banniere-800.jpg 800w,
+	./img/la-chouette-agence-banniere-600.jpg 600w,
+	./img/la-chouette-agence-banniere-400.jpg 400w,
+	./img/la-chouette-agence-banniere-200.jpg 200w
+	
+		
+	"
+	
+	
+	
+	>
 
 	<title>La Chouette Agence - Agence de webdesign à Lyon - Création de sites</title>
 
 
 	<!-- Analytics -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<!--<script  src="https://www.googletagmanager.com/gtag/js?id=G-BCH5FM8FRD" async></script>-->  <!-- CHECK RELEVANCE -->
+	<!-- Global site tag (gtag.js) - Google Analytics
+	<script  src="https://www.googletagmanager.com/gtag/js?id=G-BCH5FM8FRD" async></script>  <!-- CHECK RELEVANCE --><!--
 	<script async>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
 
 		gtag('config', 'G-BCH5FM8FRD');
-	</script>
+	</script> -->
 	<!-- Analytics END -->
 
 	<script src="./js/jquery-2.1.0.js" defer></script>

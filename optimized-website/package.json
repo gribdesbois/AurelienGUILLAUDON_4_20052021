@@ -1,0 +1,29 @@
+{
+  "name": "optimized-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./style-trimmed.css:./style-trimmed.min.css --style compressed",
+    "sass-bootstrap": "sass --watch ./css/bootstrap-trimmed.css:./css/bootstrap-trimmed.min.css --style compressed",
+    "sass-et": "sass --watch ./css/et-line-trimmed.css:./css/et-line-trimmed.min.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gribdesbois/AurelienGUILLAUDON_4_20052021.git"
+  },
+  "keywords": [
+    "SEO",
+    "optimization"
+  ],
+  "author": "grib",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gribdesbois/AurelienGUILLAUDON_4_20052021/issues"
+  },
+  "homepage": "https://github.com/gribdesbois/AurelienGUILLAUDON_4_20052021#readme",
+  "dependencies": {
+    "sass": "^1.37.5"
+  }
+}

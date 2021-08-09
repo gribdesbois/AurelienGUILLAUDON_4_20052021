@@ -48,7 +48,7 @@
 		<link rel="stylesheet" href="./fonts/fontawesome-webfont.woff2?v=4.7.0">
 	</noscript>
 
-	<!-- Largest Contentful Paint   NOT SURE IT WORKS THOUGH -->
+	<!-- Largest Contentful Paint   NOT SURE IT WORKS THOUGH  + give w3c error ==> loading img one at a time-->
 	<link rel="preload" href="img/la-chouette-agence-banniere.jpg" as="image" imagesrcset="
 	./img/la-chouette-agence-banniere.jpg 1920w,
 	./img/la-chouette-agence-banniere-1600.jpg 1600w,
@@ -61,7 +61,16 @@
 	./img/la-chouette-agence-banniere-200.jpg 200w
 	">
 
-	<link rel="preload" href="img/image-de-presentation-1600.jpg" as="image" imagesrcset="
+	<!--<link rel="preload" href="img/la-chouette-agence-banniere-400.jpg" as="image">
+	<link rel="preload" href="img/la-chouette-agence-banniere.jpg" as="image">
+	<link rel="preload" href="img/la-chouette-agence-banniere-1600.jpg" as="image">
+	<link rel="preload" href="img/la-chouette-agence-banniere-1200.jpg" as="image">
+	<link rel="preload" href="img/la-chouette-agence-banniere-800.jpg" as="image">-->
+
+
+	<!-- Same problem as before -->
+	<!---->
+<link rel="preload" href="img/image-de-presentation-1600.jpg" as="image" imagesrcset="
 							./img/image-de-presentation-1600.jpg 1920w,
 							./img/image-de-presentation-1400.jpg 1400w,
 							./img/image-de-presentation-1200.jpg 1200w,
@@ -71,17 +80,22 @@
 							./img/image-de-presentation-400.jpg 400w,
 							./img/image-de-presentation-200.jpg 200w,
 							">
+	
+	<!--<link rel="preload" href="img/image-de-presentation-1600.jpg" as="image">
+	<link rel="preload" href="img/image-de-presentation-1200.jpg" as="image">
+	<link rel="preload" href="img/image-de-presentation-800.jpg" as="image">
+	<link rel="preload" href="img/image-de-presentation-400.jpg" as="image">-->
 
 
 
 	<title>La Chouette Agence - Webdesign à Lyon - Création de sites</title>
 
-	<script src="./js/jquery-2.1.0.js"></script>
+	<script src="./js/jquery-2.1.0.js" defer></script>
 	<script src="./js/bootstrap.js" defer></script>
 	<script src="./js/blocs.js" defer></script>
 	<script src="./js/jquery.touchSwipe.js" defer></script>
 	<!-- Analytics -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics 
 	<script  src="https://www.googletagmanager.com/gtag/js?id=G-BCH5FM8FRD" async></script>  
 	<script async>
 		window.dataLayer = window.dataLayer || [];
@@ -89,7 +103,7 @@
 		gtag('js', new Date());
 
 		gtag('config', 'G-BCH5FM8FRD');
-	</script>
+	</script>-->
 
 	<!-- Analytics END -->
 

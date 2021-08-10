@@ -8,8 +8,8 @@
 
 html {
     font-family: sans-serif;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%
+    text-size-adjust: 100%;
+    
 }
 
 body {
@@ -61,8 +61,7 @@ img {
 
 hr {
     height: 0;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
+
     box-sizing: content-box
 }
 
@@ -954,7 +953,7 @@ tbody.collapse.in {
     cursor: not-allowed;
     background-color: transparent;
     background-image: none;
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
+    
 }
 
 .open>.dropdown-menu {

@@ -160,6 +160,7 @@ a:hover {
 }
 
 
+
 .l-bloc .navbar a,
 .l-bloc .navbar-brand,
 .l-bloc a .icon-md,
@@ -210,7 +211,7 @@ a:hover {
     font-size: 32px;
 }
 #bloc-1-hero{
-    background-size: inherit;
+    
     background-position-y: -1px;
 }
 
@@ -669,7 +670,7 @@ h1 {
     
 }
 
-/* ADDED WHILE DOING IMG OPTIMIZATIONS */
+/* ADDED WHILE DOING IMG OPTIMIZATIONS  */
 @media (max-width: 400px) {
     .bg-presentation {
         background-image: url("img/image-de-presentation-400.jpg");

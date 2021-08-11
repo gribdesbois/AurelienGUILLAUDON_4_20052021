@@ -5,3 +5,10 @@
 * lighten bg color by apprximatelt 30%
 * add more links in footer
 * canonical
+
+
+ Questions
+
+ * How to work around gtag perf hit?
+ img preload ==> weird behaviour + w3c error preconnect?
+ 

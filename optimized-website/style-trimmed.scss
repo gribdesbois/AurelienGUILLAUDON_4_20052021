@@ -665,7 +665,7 @@ h1 {
 
 }
 .bg-banniere.lazy-bg{
-    background-image: none;
+    background-image: none; /* class is added /removed in lazy.js */
 }
 
 .bg-presentation {

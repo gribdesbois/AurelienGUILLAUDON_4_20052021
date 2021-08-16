@@ -816,14 +816,81 @@ h4 {
 .bg-lines-h2-bg {
     background-image: url("img/lines-h2-bg.png");
 }
-
 .bg-banniere {
-    background-image: url("img/la-chouette-agence-banniere.jpg");
+    background-image: url("img/la-chouette-agence-banniere.webp");
+    background-size: cover;
+
+}
+.bg-banniere.lazy-bg{
+    background-image: none;
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation-1600.webp");
+    
 }
+
+.bg-presentation-lazy-bg{
+    background-image: none;
+}
+
+/* ADDED WHILE DOING IMG OPTIMIZATIONS  */
+@media (max-width: 400px) {
+    .bg-presentation {
+        background-image: url("img/image-de-presentation-400.webp");
+    }
+    .bg-banniere {
+        background-image: url("img/la-chouette-agence-banniere-400.webp");
+    
+    }
+}
+@media (min-width: 401px) and (max-width: 600px) {
+    .bg-presentation {
+        background-image: url("img/image-de-presentation-600.webp");
+    }
+    .bg-banniere {
+        background-image: url("img/la-chouette-agence-banniere-600.webp");
+    
+    }
+}
+@media (min-width: 601px) and (max-width: 800px) {
+    .bg-presentation {
+        background-image: url("img/image-de-presentation-800.webp");
+    }
+    .bg-banniere {
+        background-image: url("img/la-chouette-agence-banniere-800.webp");
+    
+    }
+}
+@media (min-width: 801px) and (max-width: 1000px) {
+    .bg-presentation {
+        background-image: url("img/image-de-presentation-1000.webp");
+    }
+    .bg-banniere {
+    background-image: url("img/la-chouette-agence-banniere-1000.webp");
+
+}
+}
+@media (min-width: 1001px) and (max-width: 1200px) {
+    .bg-presentation {
+        background-image: url("img/image-de-presentation-1200.webp");
+    }
+    .bg-banniere {
+    background-image: url("img/la-chouette-agence-banniere-1200.webp");
+
+}
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .bg-presentation {
+        background-image: url("img/image-de-presentation-1400.webp");
+    }
+    .bg-banniere {
+    background-image: url("img/la-chouette-agence-banniere-1400.webp");
+
+}
+} 
+
+
 
 @media (max-width: 1024px) {
     .bloc {

@@ -654,9 +654,15 @@ h1 {
 .bg-dots-bg {
     background-image: url("img/dots-bg.png");
 }
+.bg-dots-bg.lazy-bg {
+    background-image: none; /* class is added /removed in lazy.js */
+}
 
 .bg-lines-h2-bg {
     background-image: url("img/lines-h2-bg.png");
+}
+.bg-lines-h2-bg.lazy-bg {
+    background-image: none; /* class is added /removed in lazy.js */
 }
 
 .bg-banniere {
@@ -674,7 +680,7 @@ h1 {
 }
 
 .bg-presentation-lazy-bg{
-    background-image: none;
+    background-image: none; /* class is added /removed in lazy.js */
 }
 
 /* ADDED WHILE DOING IMG OPTIMIZATIONS  */

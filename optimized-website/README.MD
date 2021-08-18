@@ -10,5 +10,5 @@
  Questions
 
  * How to work around gtag perf hit?
- img preload ==> weird behaviour + w3c error preconnect?
+
  
